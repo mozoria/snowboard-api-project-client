@@ -1,7 +1,5 @@
 'use strict'
 
-// const store = require('../store')
-
 const onCreateSnowboardSuccess = () => {
   $('#snowboardModal-header').text('Successfully Created Snowboard!')
   $('#snowboardModal-header').css('background-color', 'green')
@@ -26,19 +24,25 @@ const onGetSnowboardsSuccess = snowboards => {
 }
 
 const updateSnowboardSuccess = data => {
-  $('snowboard-update-id').text('Successfully Created Snowboard!')
+  $('.update-delete').text('You successfuly updated one of your snowboards!')
   $('form').trigger('reset')
+  $('.update-delete').fadeOut(3000)
 }
 const deleteSnowboardSuccess = () => {
-
+  $('.update-delete').text('You successfuly deleted one of your snowboards!')
+  $('form').trigger('reset')
+  $('.update-delete').fadeOut(3000)
 }
 
-const deleteSnowboardFailure = error => {
-  console.error(error)
+const deleteSnowboardFailure = () => {
+  $('.update-delete').text('Something went wrong try again.')
+  $('form').trigger('reset')
+  $('.update-delete').fadeOut(3000)
 }
 
-const updateSnowboardFailure = error => {
-  console.error(error)
+const updateSnowboardFailure = () => {
+  $('.update-delete').text('Something went wrong try again.')
+  $('form').trigger('reset')
 }
 
 const onCloseSnowboardListSuccess = () => {

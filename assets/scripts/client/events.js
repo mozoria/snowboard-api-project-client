@@ -7,7 +7,6 @@ const getFormFields = require('../../../lib/get-form-fields')
 const onCreateSnowboard = event => {
   event.preventDefault()
   const form = event.target
-  console.log(form)
   const formData = getFormFields(form)
   api.createSnowboard(formData)
     .then((res) => {
@@ -20,7 +19,6 @@ const onCreateSnowboard = event => {
 const onGetSnowboards = () => {
   api.getSnowboards()
     .then(({snowboards}) => {
-      // res.snowboards
       ui.onGetSnowboardsSuccess(snowboards)
     })
     .catch((err) => {
@@ -54,7 +52,6 @@ const onCloseSnowboardList = () => {
 }
 
 const addHandlers = event => {
-  // $('#sign-up').on('submit', onSignUp)
   $('#snowboardModal').on('submit', onCreateSnowboard)
   $('#getSnowboards').on('click', onGetSnowboards)
   $('#closeSnowboardList').on('click', onCloseSnowboardList)

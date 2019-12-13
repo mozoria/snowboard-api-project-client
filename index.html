@@ -41,7 +41,7 @@
     <form id="sign-out">
       <button class="btn btn-dark">Submit</button>
     </form>
-
+<br>
   <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#snowboardModal">Add New Snowboard</button>
 
 <div class="modal fade snowboard-modal" id="snowboardModal" tabindex="-1" role="dialog" aria-labelledby="snowboardModal" aria-hidden="true">
@@ -53,6 +53,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <br>
       <div class="modal-body">
         <form id="snowboardModal-form">
           <div class="form-group">
@@ -71,9 +72,8 @@
     </div>
   </div>
 </div>
-
+<br>
 <button type="button" id="getSnowboards" class="btn btn-dark" data-toggle="modal" data-target="#snowboardModal2">Get Snowboards</button>
-
 <div class="modal fade" id="snowboardModal2" tabindex="-1" role="dialog" aria-labelledby="snowboardModal2" aria-hidden="true">
 <div class="modal-dialog" role="document">
   <div class="modal-content">
@@ -92,21 +92,26 @@
   </div>
 </div>
 </div>
+<br>
 <form id="delete-snowboard">
         <label for="snowboard-delete-id">Enter an ID</label>
         <input name="snowboard[id]" id="delete-snowboard-id" type="number" placeholder="ID">
         <button class="btn btn-dark">Delete a snowboard</button>
       </form>
+<br>
 <form id="update-snowboard">
           <label for="snowboard-update-id">Enter an ID</label>
           <input name="snowboard[id]" id="snowboard-update-id" type="number" placeholder="ID">
           <input name="snowboard[name]" type="text" placeholder="Name">
-          <input name="snowboard[designer]" type="text">
-          <input name="snowboard[color]" type="text">
+          <input name="snowboard[designer]" type="text" placeholder="Designer">
+          <input name="snowboard[color]" type="text" placeholder="Color">
           <button class="btn btn-dark">Update a Snowboard</button>
         </form>
+<br>
 </section>
 <section id="results"></section>
+<div class="update-delete">
+</div>
 </div>
     </body>
 </html>
