@@ -17,10 +17,26 @@ const onCreateSnowboard = event => {
       console.log(err)
     })
 }
+const onGetSnowboards = () => {
+  api.getSnowboards()
+    .then(({snowboards}) => {
+      // res.snowboards
+      ui.onGetSnowboardsSuccess(snowboards)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
+
+const onCloseSnowboardList = () => {
+  ui.onCloseSnowboardListSuccess()
+}
 
 const addHandlers = event => {
   // $('#sign-up').on('submit', onSignUp)
   $('#snowboardModal').on('submit', onCreateSnowboard)
+  $('#getSnowboards').on('click', onGetSnowboards)
+  $('#closeSnowboardList').on('click', onCloseSnowboardList)
 }
 
 module.exports = {

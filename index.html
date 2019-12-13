@@ -40,10 +40,10 @@
     <form id="sign-out">
       <button class="btn btn-dark">Submit</button>
     </form>
-  </section>
+
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#snowboardModal">Add New Snowboard</button>
 
-<div class="modal fade" id="snowboardModal"  class="snowboard-modal" tabindex="-1" role="dialog" aria-labelledby="snowboardModal" aria-hidden="true">
+<div class="modal fade snowboard-modal" id="snowboardModal" tabindex="-1" role="dialog" aria-labelledby="snowboardModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -70,5 +70,27 @@
     </div>
   </div>
 </div>
+
+<button type="button" id="getSnowboards" class="btn btn-primary" data-toggle="modal" data-target="#snowboardModal2">Get Snowboards</button>
+
+<div class="modal fade" id="snowboardModal2" tabindex="-1" role="dialog" aria-labelledby="snowboardModal2" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="snowboardModal2-header">Your Snowboards</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeSnowboardList">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul id="snowboardList"></ul>
+      <div class="modal-footer">
+        <button type="button" id="closeSnowboardList" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
     </body>
 </html>

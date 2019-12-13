@@ -14,6 +14,17 @@ const createSnowboard = formData => {
   })
 }
 
+const getSnowboards = () => {
+  return $.ajax({
+    url: config.apiUrl + '/snowboards',
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
-  createSnowboard
+  createSnowboard,
+  getSnowboards
 }

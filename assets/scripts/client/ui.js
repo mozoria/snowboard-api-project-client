@@ -19,11 +19,35 @@ const onCreateSnowboardSuccess = () => {
   }, 3000)
 }
 
+const onGetSnowboardsSuccess = snowboards => {
+  if (snowboards.length) {
+    snowboards.forEach(board => {
+      $('#snowboardList')
+        .append(`<li>
+                  <p>Name: ${board.name}</p>
+                  <p>Designer: ${board.designer}</p>
+                  <p>Color: ${board.color}</p>
+                </li>`)
+    })
+  }
+}
+
+const onCloseSnowboardListSuccess = () => {
+  $('#snowboardList').empty()
+}
+
+const onGetSnowboardsFailure = () => {
+  $('#snowboardModal2-form').get(0).reset()
+}
+
 const onCreateSnowboardFailure = () => {
   $('#snowboardModal-form').get(0).reset()
 }
 
 module.exports = {
   onCreateSnowboardSuccess,
-  onCreateSnowboardFailure
+  onCreateSnowboardFailure,
+  onGetSnowboardsSuccess,
+  onGetSnowboardsFailure,
+  onCloseSnowboardListSuccess
 }
