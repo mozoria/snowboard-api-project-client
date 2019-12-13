@@ -2,11 +2,12 @@
 $black: #000;
 
 body {
-  background-image: url('public/MountainBackground.jpg');
+  background-image: url("public/Mountain2Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,100) 0%, rgba(81, 88, 99, 100) 35%, rgba(14, 144, 171, 100) 100%);
+  color: Purple;
   flex: auto;
   font-family: palatino;
   padding: 40px;
@@ -44,7 +45,7 @@ ul {
 }
 
 #mountain {
-  background-image: url('public/MountainBackground.jpg');
+  background-image: url("public/Mountain2Background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,13 +1,6 @@
 'use strict'
 
 // const store = require('../store')
-// const onSignUpSuccess = () => {
-//   onSuccess('You successfuly signed up! Now, sign in.')
-// }
-//
-// const onSignUpFailure = () => {
-//   onFailure('Something went wrong, try again.')
-// }
 
 const onCreateSnowboardSuccess = () => {
   $('#snowboardModal-header').text('Successfully Created Snowboard!')
@@ -33,10 +26,11 @@ const onGetSnowboardsSuccess = snowboards => {
 }
 
 const updateSnowboardSuccess = data => {
+  $('snowboard-update-id').text('Successfully Created Snowboard!')
   $('form').trigger('reset')
 }
 const deleteSnowboardSuccess = () => {
-  $('#results').html('<p>deleted a snowboard</p>')
+
 }
 
 const deleteSnowboardFailure = error => {

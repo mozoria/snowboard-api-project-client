@@ -35,14 +35,13 @@ const updateSnowboard = formData => {
   })
 }
 
-const destroySnowboard = formData => {
+const destroySnowboard = id => {
   return $.ajax({
-    url: config.apiUrl + '/snowboards/' + formData.snowboard.id,
+    url: config.apiUrl + '/snowboards/' + id,
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`
-    },
-    data: formData
+    }
   })
 }
 

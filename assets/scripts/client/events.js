@@ -42,11 +42,11 @@ const onDeleteSnowboard = event => {
   event.preventDefault()
   const form = event.target
   const snowboardData = getFormFields(form)
-  console.warn(snowboardData)
-  //
-  // api.destroySnowboard(snowboardData)
-  //   .then(ui.deleteSnowboardSuccess)
-  //   .catch(ui.deleteSnowboardFailure)
+  const id = snowboardData.snowboard.id
+  console.log(id)
+  api.destroySnowboard(id)
+    .then(ui.deleteSnowboardSuccess)
+    .catch(ui.deleteSnowboardFailure)
 }
 
 const onCloseSnowboardList = () => {
@@ -59,7 +59,7 @@ const addHandlers = event => {
   $('#getSnowboards').on('click', onGetSnowboards)
   $('#closeSnowboardList').on('click', onCloseSnowboardList)
   $('#update-snowboard').on('submit', onUpdateSnowboards)
-  $('#delete-snowboard').on('click', onDeleteSnowboard)
+  $('#delete-snowboard').on('submit', onDeleteSnowboard)
 }
 
 module.exports = {
