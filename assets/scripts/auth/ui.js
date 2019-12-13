@@ -8,6 +8,7 @@ const onSuccess = message => {
     .addClass('success')
     .text(message)
   $('form').trigger('reset')
+  $('#message').fadeOut(2000)
 }
 
 const onFailure = message => {
@@ -16,6 +17,7 @@ const onFailure = message => {
     .addClass('failure')
     .text(message)
   $('form').trigger('reset')
+  $('#message').fadeOut(2000)
 }
 
 const onSignUpSuccess = () => {
@@ -50,15 +52,9 @@ const onSignOutSuccess = responseData => {
   store.user = {}
   $('.after-auth').hide()
   $('.before-auth').show()
-  $('.col-4').text('')
-  $('#game-event').text('')
 }
 
 const onSignOutFailure = () => {
-  onFailure('Something went wrong, try again.')
-}
-
-const onCreateGameFailure = () => {
   onFailure('Something went wrong, try again.')
 }
 
@@ -70,6 +66,5 @@ module.exports = {
   onChangePasswordSuccess,
   onChangePasswordFailure,
   onSignOutSuccess,
-  onSignOutFailure,
-  onCreateGameFailure
+  onSignOutFailure
 }
