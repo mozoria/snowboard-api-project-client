@@ -24,7 +24,31 @@ const getSnowboards = () => {
   })
 }
 
+const updateSnowboard = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/snowboards/' + formData.snowboard.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: formData
+  })
+}
+
+const destroySnowboard = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/snowboards/' + formData.snowboard.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: formData
+  })
+}
+
 module.exports = {
   createSnowboard,
-  getSnowboards
+  getSnowboards,
+  updateSnowboard,
+  destroySnowboard
 }

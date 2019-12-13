@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('../store')
+// const store = require('../store')
 // const onSignUpSuccess = () => {
 //   onSuccess('You successfuly signed up! Now, sign in.')
 // }
@@ -32,6 +32,21 @@ const onGetSnowboardsSuccess = snowboards => {
   }
 }
 
+const updateSnowboardSuccess = data => {
+  $('form').trigger('reset')
+}
+const deleteSnowboardSuccess = () => {
+  $('#results').html('<p>deleted a snowboard</p>')
+}
+
+const deleteSnowboardFailure = error => {
+  console.error(error)
+}
+
+const updateSnowboardFailure = error => {
+  console.error(error)
+}
+
 const onCloseSnowboardListSuccess = () => {
   $('#snowboardList').empty()
 }
@@ -49,5 +64,9 @@ module.exports = {
   onCreateSnowboardFailure,
   onGetSnowboardsSuccess,
   onGetSnowboardsFailure,
-  onCloseSnowboardListSuccess
+  onCloseSnowboardListSuccess,
+  updateSnowboardSuccess,
+  updateSnowboardFailure,
+  deleteSnowboardSuccess,
+  deleteSnowboardFailure
 }

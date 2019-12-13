@@ -12,6 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+    <div id='mountain'>
       <h1>Snowboards</h1>
       <div id="message"></div>
 <section class="before-auth">
@@ -91,6 +92,21 @@
   </div>
 </div>
 </div>
+<form id="delete-snowboard">
+        <label for="snowboard-delete-id">Enter an ID</label>
+        <input name="snowboard[id]" id="delete-snowboard-id" type="number" placeholder="ID">
+        <button class="btn btn-primary">Delete a snowboard</button>
+      </form>
+<form id="update-snowboard">
+          <label for="snowboard-update-id">Enter an ID</label>
+          <input name="snowboard[id]" id="snowboard-update-id" type="number" placeholder="ID">
+          <input name="snowboard[name]" type="text" placeholder="Name">
+          <input name="snowboard[designer]" type="text">
+          <input name="snowboard[color]" type="text">
+          <button class="btn btn-dark">Update a Snowboard</button>
+        </form>
 </section>
+<section id="results"></section>
+</div>
     </body>
 </html>
