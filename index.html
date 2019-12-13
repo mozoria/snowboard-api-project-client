@@ -41,5 +41,34 @@
       <button class="btn btn-dark">Submit</button>
     </form>
   </section>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#snowboardModal">Add New Snowboard</button>
+
+<div class="modal fade" id="snowboardModal"  class="snowboard-modal" tabindex="-1" role="dialog" aria-labelledby="snowboardModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="snowboardModal-header">Add New Snowboard</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="snowboardModal-form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="snowboard-name" name="snowboard[name]" placeholder="Name">
+            <br>
+            <input type="text" class="form-control" id="snowboard-designer" name="snowboard[designer]" placeholder="Designer">
+            <br>
+            <input type="text" class="form-control" id="snowboard-color" name="snowboard[color]" placeholder="Color">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     </body>
 </html>
