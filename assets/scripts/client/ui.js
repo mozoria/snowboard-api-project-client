@@ -1,5 +1,14 @@
 'use strict'
 
+const showSnowboardsTemplate = require('../templates/snowboard-listing.handlebars')
+
+const onGetSnowboardsSuccess = (data) => {
+  console.log('here in onGetSnowboardsSuccess')
+  console.log(data)
+  const showSnowboardsHtml = showSnowboardsTemplate({ snowboards: data })
+  $('#snowboardList').append(showSnowboardsHtml)
+}
+
 const onCreateSnowboardSuccess = () => {
   $('#snowboardModal-header').text('Successfully Created Snowboard!')
   $('#snowboardModal-header').css('background-color', 'green')
@@ -10,18 +19,18 @@ const onCreateSnowboardSuccess = () => {
   }, 3000)
 }
 
-const onGetSnowboardsSuccess = snowboards => {
-  if (snowboards.length) {
-    snowboards.forEach(board => {
-      $('#snowboardList')
-        .append(`<li>
-                  <p>Name: ${board.name}</p>
-                  <p>Designer: ${board.designer}</p>
-                  <p>Color: ${board.color}</p>
-                </li>`)
-    })
-  }
-}
+// const onGetSnowboardsSuccess = snowboards => {
+//   if (snowboards.length) {
+//     snowboards.forEach(board => {
+//       $('#snowboardList')
+//         .append(`<li>
+//                   <p>Name: ${board.name}</p>
+//                   <p>Designer: ${board.designer}</p>
+//                   <p>Color: ${board.color}</p>
+//                 </li>`)
+//     })
+//   }
+// }
 
 const updateSnowboardSuccess = data => {
   $('.update-delete').text('You successfuly updated one of your snowboards!')
