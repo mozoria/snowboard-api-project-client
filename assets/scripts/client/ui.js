@@ -6,7 +6,7 @@ const onGetSnowboardsSuccess = (data) => {
   console.log('here in onGetSnowboardsSuccess')
   console.log(data)
   const showSnowboardsHtml = showSnowboardsTemplate({ snowboards: data })
-  $('#snowboardList').append(showSnowboardsHtml)
+  $('#snowboardList').html(showSnowboardsHtml)
 }
 
 const onCreateSnowboardSuccess = () => {
@@ -35,18 +35,18 @@ const onCreateSnowboardSuccess = () => {
 const updateSnowboardSuccess = data => {
   $('.update-delete').text('You successfuly updated one of your snowboards!')
   $('form').trigger('reset')
-  $('.update-delete').fadeOut(3000)
+  $('.update-delete').fadeIn().fadeOut(1500)
 }
 const deleteSnowboardSuccess = () => {
   $('.update-delete').text('You successfuly deleted one of your snowboards!')
   $('form').trigger('reset')
-  $('.update-delete').fadeOut(3000)
+  $('.update-delete').fadeIn().fadeOut(1500)
 }
 
 const deleteSnowboardFailure = () => {
   $('.update-delete').text('Something went wrong try again.')
   $('form').trigger('reset')
-  $('.update-delete').fadeOut(3000)
+  $('.update-delete').fadeIn().fadeOut(1500)
 }
 
 const updateSnowboardFailure = () => {

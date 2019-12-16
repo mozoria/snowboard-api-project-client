@@ -8,16 +8,16 @@ const onSuccess = message => {
     .addClass('success')
     .text(message)
   $('form').trigger('reset')
-  $('#message').fadeOut(2000)
+  $('#message').fadeIn().fadeOut(1500)
 }
 
 const onFailure = message => {
   $('#message')
     .removeClass('success')
     .addClass('failure')
-    .text(message)
+    .html(message)
   $('form').trigger('reset')
-  $('#message').fadeOut(2000)
+  $('#message').fadeIn().fadeOut(1500)
 }
 
 const onSignUpSuccess = () => {
