@@ -1,20 +1,20 @@
-Technologies used, JS, CSS, HTML, Bootstrap, Handlebars, Modals, JQuery, SQL,
-Ruby on Rails
+# snowboard-api-project-client
 
-Link to backend api
-https://dashboard.heroku.com/apps/young-depths-39655
+Technologies used, JS, CSS, HTML, Bootstrap, Handlebars, Modals, JQuery, SQL
 
-The backend app was made with ruby on rails, and holds all of the information
-that is being communicated to the front end server. The two are not connected
-and merely communicate data to one another. The API is what is running in the
-background not shown to the user.
+FRONT END Information
 
-Link to frontend api
-https://mozoria.github.io/snowboard-api-project-client/
+Link to frontend repo
+https://github.com/mozoria/snowboard-api-project-client
 
 The frontend app is used to display the information actually being communicated
 from the API hosted on heroku. You can select what information you would like to
 see as well update, delete, and create information you would like to see.
+
+BACK END
+
+Link to backend repo
+https://github.com/mozoria/snowboard-backend
 
 Unsolved problems would include the layout, and how the website is designed.
 Would like to simplify it more so its easier to navigate while enhancing how
@@ -33,7 +33,3 @@ efficient way to handle issues.
 
 Link to wireframes
 https://imgur.com/gallery/uWokno2
-
-Link to ERD
-https://imgur.com/gallery/2H30m9a
-# snowboard-api-project-client

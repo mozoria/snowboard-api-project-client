@@ -12,18 +12,15 @@ const onCreateSnowboard = event => {
     .then((res) => {
       ui.onCreateSnowboardSuccess()
     })
-    .catch((err) => {
-      console.log(err)
-    })
+    .catch(ui.onCreateSnowboardsFailure)
 }
+
 const onGetSnowboards = () => {
   api.getSnowboards()
     .then(({snowboards}) => {
       ui.onGetSnowboardsSuccess(snowboards)
     })
-    .catch((err) => {
-      console.log(err)
-    })
+    .catch(ui.onGetSnowboardsFailure)
 }
 
 const onUpdateSnowboards = event => {
@@ -41,7 +38,6 @@ const onDeleteSnowboard = event => {
   const form = event.target
   const snowboardData = getFormFields(form)
   const id = snowboardData.snowboard.id
-  console.log(id)
   api.destroySnowboard(id)
     .then(ui.deleteSnowboardSuccess)
     .catch(ui.deleteSnowboardFailure)
