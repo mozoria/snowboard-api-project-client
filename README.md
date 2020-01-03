@@ -22,6 +22,16 @@ https://github.com/mozoria/snowboard-backend
 Link to backend deployed
 https://young-depths-39655.herokuapp.com/
 
+User stories
+As a user I want to be able to sign up
+As a user I want to be able to sign in after signing up
+As a user while signed in I want to be able to change my password
+As a user I want to be able to sign out after signing in
+As a user I want to be able to view a list of snowboards after being signed in
+As a user I want to be able to create a snowboard
+As a user I want to be able to to remove a snowboard
+As a user I want to be able to update a snowboard
+
 Unsolved problems would include the layout, and how the website is designed.
 Would like to simplify it more so its easier to navigate while enhancing how
 it looks.
