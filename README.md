@@ -7,6 +7,9 @@ FRONT END Information
 Link to frontend repo
 https://github.com/mozoria/snowboard-api-project-client
 
+Link to frontend deployed
+https://mozoria.github.io/snowboard-api-project-client/
+
 The frontend app is used to display the information actually being communicated
 from the API hosted on heroku. You can select what information you would like to
 see as well update, delete, and create information you would like to see.
@@ -15,6 +18,9 @@ BACK END
 
 Link to backend repo
 https://github.com/mozoria/snowboard-backend
+
+Link to backend deployed
+https://young-depths-39655.herokuapp.com/
 
 Unsolved problems would include the layout, and how the website is designed.
 Would like to simplify it more so its easier to navigate while enhancing how
@@ -31,5 +37,5 @@ Using the internet to determine new methods of creating an outcome. Asking other
 for help / opinion on how something was done and to see if there was a better more
 efficient way to handle issues.
 
-Link to wireframes
+Link to wireframes/user stories
 https://imgur.com/gallery/uWokno2
